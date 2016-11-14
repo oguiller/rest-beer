@@ -1,0 +1,6 @@
+/Users/grodrigu/Projects/personal/beer-rest-service/src/main/java/beer/Application.java
+/Users/grodrigu/Projects/personal/beer-rest-service/src/main/java/beer/configuration/RedisConfiguration.java
+/Users/grodrigu/Projects/personal/beer-rest-service/src/main/java/beer/Beer.java
+/Users/grodrigu/Projects/personal/beer-rest-service/src/main/java/beer/service/RedisService.java
+/Users/grodrigu/Projects/personal/beer-rest-service/src/main/java/beer/controller/RedisController.java
+/Users/grodrigu/Projects/personal/beer-rest-service/src/main/java/beer/controller/BeerController.java
