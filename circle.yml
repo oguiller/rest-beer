@@ -10,7 +10,7 @@ dependencies:
 
 test:
   override:
-    - mvn surefire-report:report
+    - mvn clean install
 
 test:
   post:
