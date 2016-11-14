@@ -1,6 +1,0 @@
-beer/Beer.class
-beer/configuration/RedisConfiguration.class
-beer/controller/BeerController.class
-beer/Application.class
-beer/controller/RedisController.class
-beer/service/RedisService.class
