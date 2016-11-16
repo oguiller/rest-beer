@@ -10,20 +10,4 @@ dependencies:
 
 test:
   override:
-    - mvn clean install
     - docker-compose up -d
-
-test:
-  post:
-      - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-      - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
-
-deployment:
-  hub:
-    branch: /.*/
-    commands:
-      - docker login -e $DOCKER_HUB_EMAIL -u $DOCKER_HUB_USER_ID -p $DOCKER_HUB_PWD
-      - docker tag restbeer_spring-rest $DOCKER_HUB_USER_ID/restbeer:$CIRCLE_SHA1
-      - docker tag restbeer_spring-rest $DOCKER_HUB_USER_ID/restbeer:latest
-      - docker push $DOCKER_HUB_USER_ID/restbeer:$CIRCLE_SHA1
-      - docker push $DOCKER_HUB_USER_ID/restbeer:latest
