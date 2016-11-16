@@ -1,0 +1,10 @@
+version: '2'
+services:
+  spring-rest:
+    image: oguiller/restbeer
+    ports:
+      - "8080:8080"
+      - "8009:8009"
+
+  redis:
+    image: redis:3.2.0
