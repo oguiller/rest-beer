@@ -11,9 +11,6 @@ dependencies:
 test:
   override:
     - mvn clean install
-
-test:
-  override:
     - docker-compose up -d
 
 test:
