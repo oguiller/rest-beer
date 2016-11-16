@@ -9,16 +9,14 @@ dependencies:
     - sudo pip install docker-compose
 
 test:
-  override:
+  pre:
     - mvn clean install
+  override:
+    - docker-compose up -d
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
     - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
 
-test:
-  override:
-      - docker-compose up -d
-      
 deployment:
   hub:
     branch: /.*/
