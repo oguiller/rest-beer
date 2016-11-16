@@ -6,7 +6,7 @@ services:
       - "8080:8080"
       - "9009:8009"
     volumes:
-      - "/target:/opt/tomcat/webapps/"
+      - "./target:/opt/tomcat/webapps/"
 
   redis:
     image: redis:3.2.0
