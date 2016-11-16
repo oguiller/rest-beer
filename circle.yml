@@ -23,7 +23,7 @@ deployment:
     branch: /.*/
     commands:
       - docker login -e $DOCKER_HUB_EMAIL -u $DOCKER_HUB_USER_ID -p $DOCKER_HUB_PWD
-      - docker tag beerrestservice_spring-rest $DOCKER_HUB_USER_ID/beerrestservice:$CIRCLE_SHA1
-      - docker tag beerrestservice_spring-rest $DOCKER_HUB_USER_ID/beerrestservice:latest
-      - docker push $DOCKER_HUB_USER_ID/beerrestservice:$CIRCLE_SHA1
-      - docker push $DOCKER_HUB_USER_ID/beerrestservice:latest
+      - docker tag restbeer_spring-rest $DOCKER_HUB_USER_ID/restbeer:$CIRCLE_SHA1
+      - docker tag restbeer_spring-rest $DOCKER_HUB_USER_ID/restbeer:latest
+      - docker push $DOCKER_HUB_USER_ID/restbeer:$CIRCLE_SHA1
+      - docker push $DOCKER_HUB_USER_ID/restbeer:latest
